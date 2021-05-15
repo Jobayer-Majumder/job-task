@@ -1,7 +1,7 @@
 import React from 'react';
 import ReviewData from '../ReviewData/ReviewData';
 import ReviewHeading from '../ReviewHeading/ReviewHeading';
-import ShowReviewData from '../ShowReviewData/ShowReviewData';
+import ShowReviewContent from '../ShowReviewContent/ShowReviewContent';
 
 
 const Review = () => {
@@ -11,7 +11,7 @@ const Review = () => {
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-3">
                     {
-                        ReviewData.map((review, index) => <ShowReviewData key={index++} review={review} />)
+                        ReviewData.map((review, index) => <ShowReviewContent key={index++} review={review} />)
                     }
                 </div>
             </div>

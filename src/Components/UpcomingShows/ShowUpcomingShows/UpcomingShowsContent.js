@@ -1,5 +1,5 @@
 import React from 'react';
-import './ShowUpcomingShows.css';
+import './UpcomingShowsContent.css';
 import { BsArrowRight } from 'react-icons/bs';
 import { AiOutlineDatabase } from 'react-icons/ai';
 
@@ -10,7 +10,7 @@ const ShowUpcomingShows = ({ shows }) => {
 
     return (
         <>
-            <div className="col mb-3">
+            <div className="col mb-4">
                 <div className="card card-bg custom-radius shadow">
                     <img src={img} className="card-img-top" alt="" />
                     <div className="card-body">

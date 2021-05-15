@@ -2,10 +2,9 @@ import React from 'react';
 import HeaderSlogan from '../HeaderSlogan/HeaderSlogan';
 import Navbar from '../Navbar/Navbar';
 import banner from '../../../images/headerBanner.png';
-import CustomerSatisfaction from '../CustomerSatisfaction/CustomerSatisfaction';
 
 const headerStyle = {
-    height: '862px',
+    height: '700px',
     backgroundImage: `url(${banner})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -17,7 +16,6 @@ const Header = () => {
         <header className='bg-dark' style={headerStyle}>
             <Navbar />
             <HeaderSlogan />
-            <CustomerSatisfaction />
         </header>
     );
 };

@@ -1,8 +1,7 @@
 import React from 'react';
-import './ShowingSatisfyData.css';
+import './ShowSatisfyContent.css';
 
-
-const ShowingSatisfyData = ({ data }) => {
+const ShowSatisfyContent = ({ data }) => {
     const { icon, title, value } = data;
 
     return (
@@ -18,4 +17,4 @@ const ShowingSatisfyData = ({ data }) => {
     );
 };
 
-export default ShowingSatisfyData;
+export default ShowSatisfyContent;

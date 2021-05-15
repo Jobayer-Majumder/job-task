@@ -1,13 +1,12 @@
 import React from 'react';
-import './ShowReviewData.css';
+import './ShowReviewContent.css';
 
-
-const ShowReviewData = ({ review }) => {
+const ShowReviewContent = ({ review }) => {
     const { img, flag, name, address, description } = review;
 
     return (
         <>
-            <div className="col mb-3">
+            <div className="col mb-4">
                 <div className="review-card-radius">
                     <div className="card-bg review-card text-white p-4">
                         <div className="d-flex">
@@ -30,4 +29,4 @@ const ShowReviewData = ({ review }) => {
     );
 };
 
-export default ShowReviewData;
+export default ShowReviewContent;
