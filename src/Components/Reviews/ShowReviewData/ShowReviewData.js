@@ -3,11 +3,11 @@ import './ShowReviewData.css';
 
 
 const ShowReviewData = ({ review }) => {
-    const { img, name, address, description } = review;
+    const { img, flag, name, address, description } = review;
 
     return (
         <>
-            <div className="col">
+            <div className="col mb-3">
                 <div className="review-card-radius">
                     <div className="card-bg review-card text-white p-4">
                         <div className="d-flex">
@@ -15,8 +15,9 @@ const ShowReviewData = ({ review }) => {
                                 <img src={img} alt="" />
                             </div>
                             <div className="ms-4">
-                                <h5>{name}</h5>
-                                <p className='nunito-font'>{address}</p>
+                                <h6>{name}</h6>
+                                <img src={flag} alt="" />
+                                <p className='nunito-font d-inline-block ms-2'>{address}</p>
                             </div>
                         </div>
                         <div className="body">

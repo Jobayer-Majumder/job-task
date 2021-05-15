@@ -8,22 +8,22 @@ const customerSatisfyData = [
     {
         icon: <BsHeart />,
         title: 'Label',
-        data: '0'
+        value: '405'
     },
     {
         icon: <FiDollarSign />,
         title: 'Label',
-        data: '0'
+        value: '820'
     },
     {
         icon: <BsHeart />,
         title: 'Label',
-        data: '0'
+        value: '504'
     },
     {
         icon: <FiDollarSign />,
         title: 'Label',
-        data: '0'
+        value: '380'
     },
 ];
 

@@ -19,8 +19,8 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         
                         <div className="navbar-nav ms-auto nunito-font">
-                            <a className="nav-link"href="/"><BiSearch/> Search</a>
-                            <a className="nav-link"href="/">Account</a>
+                            <a className="nav-link me-3"href="/"><BiSearch/> Search</a>
+                            <a className="nav-link me-3"href="/">Account</a>
                             <a className="nav-link" href="/">Help</a>
                             <a className="nav-link" href="/"><FiShoppingBag /></a>
                         </div>

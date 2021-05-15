@@ -2,12 +2,12 @@
 
 .review-card{
     border: 1px solid #E5AF56;
-    border-radius: 6px;
+    border-radius: 8px 0px 8px 8px;
 }
 
 .review-card-radius{
-    border-right: 7px solid #2796E5;
-    border-top: 7px solid #347897;
+    border-right: 9px solid #347897;
+    border-top: 9px solid #347897;
     border-top-left-radius: 25px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 15px;
