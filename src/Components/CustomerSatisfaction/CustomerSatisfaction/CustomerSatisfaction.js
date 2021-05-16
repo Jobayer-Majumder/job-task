@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
-import UpcomingShowsContent from '../ShowUpcomingShows/UpcomingShowsContent';
-import ShowsData from './ShowsCardData';
+import data from '../SatisfactionData/SatisfactionData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
+import ShowSatisfyContent from '../ShowSatisfyContent/ShowSatisfyContent';
 
 
 
-const ShowsCard = () => {
+
+
+const CustomerSatisfaction = () => {
     const [width, setWidth] = useState(null);
 
     window.addEventListener('resize', (e) => {
         setWidth(e.target.outerWidth);
     });
-
+    
     return (
-        <section>
+        <section style={{ background: '#0A0B1A', paddingBottom: '50px' }}>
             <div className="container">
-            <Swiper
-                    spaceBetween={15}
+                <Swiper
+                    spaceBetween={0}
                     slidesPerView={width < 600 ? 2 : 4}
                 >
                     {
-                        ShowsData.map((shows, index) => <SwiperSlide key={index++} >
-                            <UpcomingShowsContent shows={shows} />
+                        data.map((data, index) => <SwiperSlide key={index++} >
+                            <ShowSatisfyContent data={data} />
                         </SwiperSlide>)
                     }
                 </Swiper>
@@ -32,4 +34,4 @@ const ShowsCard = () => {
     );
 };
 
-export default ShowsCard;
+export default CustomerSatisfaction;

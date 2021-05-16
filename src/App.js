@@ -1,5 +1,5 @@
 import './App.css';
-import CustomerSatisfaction from './Components/CustomerSatisfaction/CustomerSatisfaction';
+import CustomerSatisfaction from './Components/CustomerSatisfaction/CustomerSatisfaction/CustomerSatisfaction';
 import Header from './Components/Headers/Header/Header';
 import Review from './Components/Reviews/Review/Review';
 import UpcomingShows from './Components/UpcomingShows/UpcomingShows/UpcomingShows';

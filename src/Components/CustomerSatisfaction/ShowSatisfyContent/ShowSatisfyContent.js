@@ -6,7 +6,7 @@ const ShowSatisfyContent = ({ data }) => {
 
     return (
         <>
-            <div class="col d-flex justify-content-center mb-3">
+            <div className="col d-flex justify-content-center">
                 <div className="circle text-white d-flex flex-column justify-content-center align-items-center ">
                     <h3 className='text-primary'>{icon}</h3>
                     <h3 className=''>{value}</h3>
