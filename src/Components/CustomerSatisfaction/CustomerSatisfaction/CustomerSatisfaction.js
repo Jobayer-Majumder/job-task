@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../SatisfactionData/SatisfactionData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/swiper.min.css";
@@ -10,18 +10,26 @@ import ShowSatisfyContent from '../ShowSatisfyContent/ShowSatisfyContent';
 
 
 const CustomerSatisfaction = () => {
-    const [width, setWidth] = useState(null);
+    const [isPhone, setIsPhone] = useState(false);
 
-    window.addEventListener('resize', (e) => {
-        setWidth(e.target.outerWidth);
-    });
+    const handleResize = () => {
+        if (window.innerWidth < 750) {
+            setIsPhone(true)
+        } else {
+            setIsPhone(false)
+        }
+      }
+      
+      useEffect(() => {
+        window.addEventListener("resize", handleResize)
+      });
     
     return (
         <section style={{ background: '#0A0B1A', paddingBottom: '50px' }}>
             <div className="container">
                 <Swiper
-                    spaceBetween={0}
-                    slidesPerView={width < 600 ? 2 : 4}
+                    spaceBetween={10}
+                    slidesPerView={isPhone ? 1.5 : 4}
                 >
                     {
                         data.map((data, index) => <SwiperSlide key={index++} >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReviewData from '../ReviewData/ReviewData';
 import ReviewHeading from '../ReviewHeading/ReviewHeading';
 import ShowReviewContent from '../ShowReviewContent/ShowReviewContent';
@@ -9,11 +9,19 @@ import "swiper/components/pagination/pagination.min.css";
 
 
 const Review = () => {
-    const [width, setWidth] = useState(null);
+    const [isPhone, setIsPhone] = useState(false);
 
-    window.addEventListener('resize', (e) => {
-        setWidth(e.target.outerWidth);
-    });
+    const handleResize = () => {
+        if (window.innerWidth < 750) {
+            setIsPhone(true)
+        } else {
+            setIsPhone(false)
+        }
+      }
+      
+      useEffect(() => {
+        window.addEventListener("resize", handleResize)
+      });
 
 
     return (
@@ -22,7 +30,7 @@ const Review = () => {
             <div className="container">
             <Swiper
                     spaceBetween={15}
-                    slidesPerView={width < 600 ? 1 : 3}
+                    slidesPerView={isPhone ? 1.2 : 3}
                 >
                     {
                         ReviewData.map((review, index) => <SwiperSlide key={index++} >

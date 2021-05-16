@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UpcomingShowsContent from '../ShowUpcomingShows/UpcomingShowsContent';
 import ShowsData from './ShowsCardData';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,18 +8,26 @@ import "swiper/components/pagination/pagination.min.css"
 
 
 const ShowsCard = () => {
-    const [width, setWidth] = useState(null);
+    const [isPhone, setIsPhone] = useState(false);
 
-    window.addEventListener('resize', (e) => {
-        setWidth(e.target.outerWidth);
-    });
+    const handleResize = () => {
+        if (window.innerWidth < 750) {
+            setIsPhone(true)
+        } else {
+            setIsPhone(false)
+        }
+      }
+      
+      useEffect(() => {
+        window.addEventListener("resize", handleResize)
+      });
 
     return (
         <section>
             <div className="container">
             <Swiper
                     spaceBetween={15}
-                    slidesPerView={width < 600 ? 2 : 4}
+                    slidesPerView={isPhone ? 1.5 : 4}
                 >
                     {
                         ShowsData.map((shows, index) => <SwiperSlide key={index++} >
