@@ -30,7 +30,7 @@ const Review = () => {
             <div className="container">
             <Swiper
                     spaceBetween={15}
-                    slidesPerView={isPhone ? 1.2 : 3}
+                    slidesPerView={isPhone ? 1 : 3}
                 >
                     {
                         ReviewData.map((review, index) => <SwiperSlide key={index++} >
